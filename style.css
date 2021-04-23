@@ -1,0 +1,96 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+}
+
+body{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    background: #154367;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.navigation{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: white;
+    transition: width 1s, height 0.5s;
+    transition-delay: 0s,0.75s;
+    border-radius: 4px;
+    z-index: 100000;
+    overflow: hidden;
+}
+
+.navigation.active{
+    width: 250px;
+    height: 350px;
+    transition: width 1s, height 0.5s;
+    transition-delay: 0s,0.75s;
+}
+
+.navigation .toggle{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #afdf05;
+    transition: 0.5s;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+}
+
+.navigation .toggle.active{
+    background: rgb(116, 199, 238);
+}
+
+.navigation .toggle::before{
+    content : '+';
+    position: absolute;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-weight: 900;
+    color: white;
+    transition: 0.5s;
+}
+
+.navigation .toggle.active::before{
+    transform: rotate(315deg);
+}
+
+ul{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    width: 100%;
+}
+
+ul li a{
+    text-transform: uppercase;
+    line-height: 50px;
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+ul li a:hover{
+    color: rgb(252, 190, 119);
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.1rem;
+    transition: 0.5s;
+}
